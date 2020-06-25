@@ -1,0 +1,102 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.app {
+    height: 100%;
+    background-color: whitesmoke;
+    overflow-y: scroll;
+}
+
+.app__header {
+    background-color: white;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.app__content {
+    display: flex;
+    margin-top: 3rem;
+    height: calc(100% - 5rem);
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.app__footer {
+    text-align: center;
+}
+
+.content__cards-section {
+    display: flex;
+    flex: 4;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.content__actions-section {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 2rem;
+    align-items: center;
+}
+
+.section__btn {
+    cursor: pointer;
+    width: 80%;
+    margin-top: 2rem;
+    height: 2.5rem;
+    background-color: #72C3DC;
+    outline: none;
+    color: white;
+    border: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.3rem 0 #6F98A8;
+}
+
+.section__btn:active {
+    box-shadow: none;
+}
+
+@media screen and (max-width: 375px) {
+    .app {
+        background-color: white;
+    }
+
+    .app__header {
+        background-color: #000000;
+        color: white;
+    }
+
+    .app__content {
+        flex-direction: column-reverse;
+    }
+
+    .content__cards-section {
+        padding: 2rem;
+    }
+
+    .content__actions-section {
+        flex-direction: row;
+    }
+
+    .section__btn {
+        margin-right: 1rem;
+    }
+
+    .section__btn:last-child {
+        margin-right: 0;
+    }
+}
