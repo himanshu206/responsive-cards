@@ -1,4 +1,4 @@
-(function (d, cards, colors) {
+(function (d, cards, colors, Card) {
   let appElement, appCardsSection, shuffleBtn, sortBtn;
 
   const attachEventListeners = () => {
