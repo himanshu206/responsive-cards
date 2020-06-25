@@ -10,7 +10,7 @@
     clearCardListUI();
 
     cards.forEach((card, index) => {
-      const cardUI = generateCardUI(card, colors[index % colors.length]);
+      const cardUI = Card.generateUI(card, colors[index % colors.length]);
       appCardsSection.appendChild(cardUI);
     });
   };
@@ -44,4 +44,4 @@
     attachEventListeners();
     init();
   });
-})(document, Data.cards, Data.colors);
+})(document, Data.cards, Data.colors, Card);
